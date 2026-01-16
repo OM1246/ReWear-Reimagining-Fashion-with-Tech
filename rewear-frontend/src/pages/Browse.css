@@ -1,0 +1,134 @@
+.browse-page {
+  padding: 20px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  margin-top: auto;
+  background-color: #f8fafc; /* Clean light gray background */
+  min-height: calc(100vh - 80px); /* Adjust for navbar height */
+  position: relative;
+}
+
+.browse-hero {
+  margin-bottom: 3rem;
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.browse-hero h2 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+  color: #1e293b; /* Dark slate */
+  font-weight: 800;
+}
+
+.browse-hero p {
+  font-size: 1.125rem;
+  color: #64748b; /* Slate gray */
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.browse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.browse-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.browse-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.browse-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+}
+
+.browse-card h3 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.browse-card p {
+  color: #64748b;
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.browse-card p strong {
+  color: #334155;
+  font-weight: 600;
+}
+
+.browse-btn {
+  margin-top: 1.25rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb; /* Bright clear blue */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.browse-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .browse-hero h2 {
+    font-size: 2rem;
+  }
+  
+  .browse-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .browse-page {
+    padding: 10px;
+  }
+
+  .browse-hero {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .browse-hero h2 {
+    font-size: 1.75rem;
+  }
+}
