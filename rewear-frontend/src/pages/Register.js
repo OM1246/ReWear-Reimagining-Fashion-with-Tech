@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import API from "../services/api";
 import { useNavigate, Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+
 import "./Register.css"; // Import the new CSS file
 
 export default function Register() {
@@ -138,7 +138,7 @@ export default function Register() {
           <span>🌱</span> Join our sustainable fashion community
         </div>
       </div>
-      <Footer />
+
     </div>
   );
 }

@@ -34,12 +34,6 @@ Explore a curated list of community-driven items.
 Safe and simple entry to the platform.
 <div style="display: flex; gap: 10px;">
   <img src="assets/screenshots/login.png" alt="Login Page" width="48%">
-  <img src="assets/screenshots/register.png" alt="Register Page" width="48%">
-</div>
-
-### Seamless Swap Requests
-Request swaps with a single click, viewing full item details.
-![Swap Request](assets/screenshots/swap_request.png)
 
 ## 🛠️ Installation & Setup
 

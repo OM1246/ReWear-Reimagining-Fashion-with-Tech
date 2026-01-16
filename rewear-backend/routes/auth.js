@@ -51,19 +51,28 @@ router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
+    console.log(`Login attempt for: ${email}`);
+
     if (!email || !password) {
       return res.status(400).json({ message: "Email and password required" });
     }
 
-    const user = await User.findOne({ email });
-    if (!user) return res.status(400).json({ message: "User not found" });
+    const user = await User.findOne({ email: email.trim() }); // Trim email
+    if (!user) {
+      console.log("User not found in DB");
+      return res.status(400).json({ message: "User not found" });
+    }
 
     if (!user.password) {
+      console.log("User has no password");
       return res.status(500).json({ message: "User has no password set" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) return res.status(400).json({ message: "Invalid credentials" });
+    if (!isMatch) {
+      console.log("Password mismatch");
+      return res.status(400).json({ message: "Invalid credentials" });
+    }
 
     const token = jwt.sign(
       { id: user._id, isAdmin: user.isAdmin },

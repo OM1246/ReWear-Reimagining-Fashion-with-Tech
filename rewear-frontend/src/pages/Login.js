@@ -22,8 +22,10 @@ export default function Login() {
       localStorage.setItem("user", JSON.stringify(res.data.user));
       navigate("/dashboard");
     } catch (err) {
+      console.error("Login Error Details:", err);
       setError(
         err.response?.data?.message ||
+          err.message ||
           "Login failed. Please check your credentials."
       );
     }
